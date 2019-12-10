@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lld.c                                              :+:      :+:    :+:   */
+/*   ld.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dstracke <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: crath <crath@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/15 21:01:46 by dstracke          #+#    #+#             */
-/*   Updated: 2019/12/16 02:34:38 by dstracke         ###   ########.fr       */
+/*   Created: 2019/09/07 17:22:05 by crath             #+#    #+#             */
+/*   Updated: 2019/09/25 20:19:53 by crath            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-int		lld(t_list *carry, t_vm *vm)
+int		ld(t_list *carry, t_vm *vm)
 {
 	int n;
-	int t;
 
 	if ((carry->coding & 0x3c) == 0x34)
 	{
 		n = carry->op;
-		iterate(&n, (short)get_short(vm->map, carry->pc) % MEM_SIZE);
-		t = get_uint(vm->map, n);
-		t = t > 0x7fffffff ? (t >> 16) | 0xffff0000 : t >> 16;
+		iterate(&n, ((short)get_short(vm->map, carry->pc) % IDX_MOD) %
+			MEM_SIZE);
 		iterate(&carry->pc, 2);
-		carry->registry[vm->map[carry->pc].val - 1] = t;
+		carry->registry[vm->map[carry->pc].val - 1] = get_uint(vm->map, n);
 	}
 	else if ((carry->coding & 0x3c) == 0x24)
 	{
