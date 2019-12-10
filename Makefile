@@ -18,9 +18,9 @@ VM_SRC			=	bot_order_changing.c check_regs_and_coding.c \
 					runcycle.c search_flags.c sound.c start_visualization.c \
 					stdout.c visualization_keys.c visualization_ncurses.c
 
-VM_INS_SRC		=	live.c ld.c st.c add.c sub.c and.c or.c \
-					xor.c zjmp.c ldi.c sti.c fork.c lld.c lldi.c \
-					lfork.c	aff.c fn.c iterate.c
+VM_INS_SRC		=	live_is_awesome.c ld_dd.c st_rapper.c add_kek.c subway.c and_pand.c xork.c \
+					xxxorse.c zjumping.c ldi_midi.c stishok.c fork_pork.c llddd.c lldick.c \
+					lfork_lpork.c aff_gaff.c fn_ffn.c iterate_count.c
 
 PRINTF_SRC		=	ft_printf.c	ft_create_format.c ft_itoa.c \
 					ft_memcpy.c ft_print_c.c ft_print_dec.c \
@@ -31,9 +31,9 @@ PRINTF_SRC		=	ft_printf.c	ft_create_format.c ft_itoa.c \
 					ft_putwstr.c ft_read_format.c ft_strdup.c \
 					ft_strjoin.c ft_strlen.c ft_wstrlen.c
 
-ASM_SRC			=	main.c arg_output.c backward.c check_regis.c \
-					helpers.c invalidates.c op.c remake_package.c \
-					take_operat_and_name.c take_vals.c translate_opers.c \
+ASM_SRC			=	main.c argument_outputer.c awkward.c kekk_register.c \
+					helpers.c invalidates.c objective_programming.c recake_puck.c \
+					take_it_back_and_name_it.c take_wallie.c ih_zvali_opera.c \
 					val_translate.c validate_argument.c
 
 
